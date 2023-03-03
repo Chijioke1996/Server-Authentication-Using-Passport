@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+</head>
+
+<!-- STYLE SHEET -->
+<style>
+.first-name{
+    
+}
+
+.last-name{
+   margin-top: 10px; 
+}
+
+.email{
+    margin-top: 10px; 
+}
+
+.password{
+    margin-top: 10px; 
+}
+
+.btn{
+    margin: 10px; 
+}
+
+
+</style>
+
+<body>
+    <h1>REGISTER</h1>
+
+    <form action="/facebook/register" method="post">
+        <div>
+            <label for="firstname">First name:</label>
+            <input type="text" required name="firstname" class="first-name"><br>
+
+            <label for="Lastname">Last name:</label>
+            <input type="text" required name="lastname" class="last-name"><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" required name="email" class="email"><br>
+
+            <label for="password">password:</label>
+            <input type="password" required name="password" class="password">
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+    </form>
+</body>
+
+</html>
